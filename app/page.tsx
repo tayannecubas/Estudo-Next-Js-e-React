@@ -1,4 +1,4 @@
-import {Metadata} from 'next';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Home - Aulão Next JS',
@@ -17,12 +17,15 @@ export const metadata: Metadata = {
     }
   }
 }
+export const revalidate = 60; // 1 minuto
 
 export default function HomePage() {
+
+  const randomNumber = Math.random() * 10;
   return (
-    <main>
+    <div>
       <h1>Home Teste</h1>
-      <p>Teste de landing page para aplicação de módulo Next JS.</p>
-    </main>
+      <h2> Número gerado: {randomNumber}</h2>
+    </div>
   );
 }
