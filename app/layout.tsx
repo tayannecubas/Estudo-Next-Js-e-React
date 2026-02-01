@@ -1,4 +1,24 @@
+import { Metadata } from "next";
 import "./globals.css";
+import { Header } from '@/components/header';
+
+export const metadata: Metadata = {
+  title: 'Home - Aula Next JS',
+  description: 'Teste de landing page para aplicação de módulo Next JS.',
+  openGraph:{
+    title: 'Aprendendo Next JS',
+    description: 'Teste de landing page para aplicação de módulo Next JS.',
+  },
+  robots:{
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot:{
+      index: true,
+      follow: true,
+    }
+  }
+}
 
 
 export default function RootLayout({
@@ -11,7 +31,7 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        <h1>Estudo de Next.js + React</h1>
+        <Header />
         {children}
       </body>
     </html>
