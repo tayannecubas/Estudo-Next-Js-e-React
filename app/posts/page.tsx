@@ -1,6 +1,6 @@
-import { Button } from "@/components/button";
+import Link from "next/link";
 
-interface PostProps {
+export interface PostProps {
     id: number;
     title: string;
     body: string;
@@ -28,7 +28,7 @@ export default async function PostsPage() {
     'use server'
 
    const userId = formData.get('userId');
-   
+
    const response = await fetch (`https://dummyjson.com/posts/user/${userId}`)
    const data: ResponseProps = await response.json()
 
@@ -64,6 +64,9 @@ export default async function PostsPage() {
             <div key={post.id} className="bg-gray-200 p-4 rounded-md w-80">
               <h2 className="font-bold">{post.title}</h2>
               <p>{post.body}</p>
+              <Link href={`/posts/${post.id}`} className="text-blue-500 hover:underline">
+                Ver detalhes
+              </Link>
             </div>
           ))}
         </div>
