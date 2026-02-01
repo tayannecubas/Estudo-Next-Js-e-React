@@ -1,21 +1,25 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Metadata } from "next";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Header } from '@/components/header';
 
 export const metadata: Metadata = {
-  title: "Ninguém Liga",
-  description: "Ninguém merece Netx.Js + React",
-};
+  title: 'Home - Aula Next JS',
+  description: 'Teste de landing page para aplicação de módulo Next JS.',
+  openGraph:{
+    title: 'Aprendendo Next JS',
+    description: 'Teste de landing page para aplicação de módulo Next JS.',
+  },
+  robots:{
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot:{
+      index: true,
+      follow: true,
+    }
+  }
+}
+
 
 export default function RootLayout({
   children,
@@ -25,8 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
