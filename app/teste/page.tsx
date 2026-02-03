@@ -1,9 +1,14 @@
+// Marca este componente como Client Component para usar hooks do React
 'use client';
 
 import { useEffect, useState } from "react";
+
+// Componente de cliente que busca e exibe posts da API
 export default function TestePage() {
+    // Estado para armazenar os posts fetched da API
     const [posts, setPosts] = useState([]);
 
+    // Hook para buscar dados da API assim que o componente monta
     useEffect(() => {
         fetch('https://dummyjson.com/posts')
         .then(res => res.json())
