@@ -1,3 +1,4 @@
+// Componente simples da página de contatos
 export default function ContatosPage() {
     return (
       <div>
