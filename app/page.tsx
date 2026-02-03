@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 // Define metadados (SEO) da página como título, descrição, Open Graph e robots
 export const metadata: Metadata = {
-  title: 'Home - Aulão Next JS',
+  title: 'Estudo de Next JS',
   description: 'Teste de landing page para aplicação de módulo Next JS.',
   openGraph:{
     title: 'Aprendendo Next JS',
