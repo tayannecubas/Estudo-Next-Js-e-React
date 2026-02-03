@@ -2,10 +2,9 @@ import Link from 'next/link';
 
 export function Header() {
     return (
-        <header className="flex px-2 py-4 bg-zinc-900 text-white "> 
-            <div className="flex items-center justify-between w-full mx-auto max-w-7xl">
-                <div> Teste </div>
-
+        <header className="flex px-5 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white "> 
+            <div className="flex items-center justify-between bg-gradient-to-r from-blue-500 to-purple-600 w-full mx-auto max-w-7xl">
+                <div className="text-xl font-bold"> Estudo de Next.js </div>
                 <nav>
                     <ul className="flex items-center justify-center gap-6 pag-3">
                         <li>
@@ -21,6 +20,16 @@ export function Header() {
                         <li>
                             <Link href="/dashboard">
                             Dashboard
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/lista">
+                            Minha lista
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/contatos">
+                            Contatos
                             </Link>
                         </li>
                     </ul>

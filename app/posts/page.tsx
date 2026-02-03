@@ -1,5 +1,5 @@
-// Importa Link do Next.js para navegação otimizada
-import Link from "next/link";
+// Importa o componente PostCard para exibir cada post em um card estilizado
+import { PostCard } from "@/components/like/post-card";
 
 // Interface para tipagem de um post individual
 export interface PostProps {
@@ -73,22 +73,15 @@ export default async function PostsPage() {
            name="userId"
           />
           <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">
-            Buscar Posts por Usuário
+            Buscar Posts 
           </button>
         </form> 
 
         {/* Container com layout flexível para exibir os posts em cards */}
         <div className="flex flex-wrap gap-4">
-          {/* Mapeia cada post para um card de exibição */}
+          {/* Mapeia cada post para um card de exibição com likes */}
           {data.posts.map (post => (
-            <div key={post.id} className="bg-gray-200 p-4 rounded-md w-80">
-              <h2 className="font-bold">{post.title}</h2>
-              <p>{post.body}</p>
-              {/* Link para a página de detalhes do post */}
-              <Link href={`/posts/${post.id}`} className="text-blue-500 hover:underline">
-                Ver detalhes
-              </Link>
-            </div>
+            <PostCard key={post.id} post={post} />
           ))}
         </div>
       </div>
