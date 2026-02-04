@@ -1,5 +1,5 @@
 // Importa o componente PostCard para exibir cada post em um card estilizado
-import { PostCard } from "@/components/like/post-card";
+import { PostCard } from "@/components/post-card";
 
 // Interface para tipagem de um post individual
 export interface PostProps {

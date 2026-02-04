@@ -2,7 +2,7 @@
 export default function ListaPage() {
     return (
       <div>
-         <h1>Minha Lista</h1>
+         <h1>Minha Lista de Posts</h1>
       </div>
     );
 }

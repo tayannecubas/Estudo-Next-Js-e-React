@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import "./globals.css";
 import { Header } from '@/components/header';
+import { FavoritosProvider } from '@/context/favoritos-context';
 
 export const metadata: Metadata = {
   title: 'Home - Aula Next JS',
@@ -28,11 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-        <Header />
-        {children}
+      <body>
+        <FavoritosProvider>
+          <Header />
+          {children}
+        </FavoritosProvider>
       </body>
     </html>
   );
