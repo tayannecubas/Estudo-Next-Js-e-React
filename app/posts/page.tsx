@@ -1,5 +1,7 @@
 // Importa o componente PostCard para exibir cada post em um card estilizado
 import { PostCard } from "@/components/post-card";
+// Importa o componente de filtros com useReducer
+import { FiltrosPosts } from "@/components/filtros-posts";
 
 // Interface para tipagem de um post individual
 export interface PostProps {
@@ -56,6 +58,12 @@ export default async function PostsPage() {
          <h1 className="text-center mt-5 mb-2 font-bold text-4xl"> 
           Página de Posts
           </h1>
+
+        {/* Componente de filtros com useReducer */}
+        <div className="max-w-md mx-auto mb-6">
+          <FiltrosPosts />
+        </div>
+
         {/* Botão para buscar todos os posts */}
         <button onClick={handleFetchPosts}> 
           Buscar Posts 

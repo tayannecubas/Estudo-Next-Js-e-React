@@ -6,7 +6,7 @@ export function Header() {
             <div className="flex items-center justify-between bg-gradient-to-r from-blue-500 to-purple-600 w-full mx-auto max-w-7xl">
                 <div className="text-xl font-bold"> Estudo de Next.js </div>
                 <nav>
-                    <ul className="flex items-center justify-center gap-6 pag-3">
+                    <ul className="flex items-center justify-center gap-6 p-3">
                         <li>
                             <Link href="/">
                             Home
